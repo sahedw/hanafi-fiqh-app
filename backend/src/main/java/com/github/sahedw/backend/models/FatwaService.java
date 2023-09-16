@@ -12,7 +12,6 @@ public class FatwaService {
     private final FatwaRepo fatwaRepo;
 
     public List<Fatwa> getAllFatwas() {
-        System.out.println(fatwaRepo.findAll());
         return fatwaRepo.findAll();
     }
 }
