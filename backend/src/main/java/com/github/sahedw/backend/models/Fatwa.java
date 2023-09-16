@@ -9,6 +9,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class Fatwa {
 
+    String id;
+
     String title;
 
     String arabicTitle;
