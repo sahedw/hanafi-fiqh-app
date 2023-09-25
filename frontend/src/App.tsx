@@ -20,7 +20,7 @@ function App() {
                 return (
                     <>
                         <section>
-                            <h2>{fatwa.title}</h2>
+                            <h2>Title: {fatwa.title}</h2>
                             <h2>{fatwa.arabicTitle}</h2>
                             <p>{fatwa.description}</p>
                             <p>{fatwa.quranReference}</p>
