@@ -1,9 +1,10 @@
 name: Deploy App
 
 on:
-  push:
-    branches:
-      - main # Modify this to match your repository's default branch
+  workflow_run:
+    workflows: ["Build App"]
+    types:
+      - completed
 
 jobs:
   deploy:
