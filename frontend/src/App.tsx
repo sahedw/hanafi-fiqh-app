@@ -16,7 +16,7 @@ function App() {
 
     return (
         <>
-            <h1>Objects test again:</h1>
+            <h1>Objects test new:</h1>
             {fatwas.map((fatwa) => {
                 return (
                     <>
