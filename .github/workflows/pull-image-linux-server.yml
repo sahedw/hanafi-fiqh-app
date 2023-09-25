@@ -23,7 +23,15 @@ jobs:
           script: |
             # Your Docker-related deployment commands here
             cd ./coding/hanafi-fiqh-app
-            chmod +x deploy.sh
-            ./deploy.sh
-
-
+            
+            # Stop the existing container (if running)
+            docker stop hanafi-fiqh-app || true
+            
+            # Remove the existing container (if exists)
+            docker rm hanafi-fiqh-app || true
+            
+            # Pull the latest Docker image from Docker Hub
+            docker pull sahedw/hanafi-fiqh-app:latest
+            
+            # Start a new container with the updated image
+            docker run -d --name hanafi-fiqh-app --env MONGO_DB_URI=${{ secrets.MONGO_DB_URI }} -p 8080:8080 sahedw/hanafi-fiqh-app:latest
